@@ -110,6 +110,7 @@ class SyncWorker(base.Worker):
                 return
 
     def run(self):
+        print("Using sync")
         # if no timeout is given the worker will never wait and will
         # use the CPU for nothing. This minimal timeout prevent it.
         timeout = self.timeout or 0.5

@@ -150,6 +150,7 @@ class EventletWorker(AsyncWorker):
         super().handle(listener, client, addr)
 
     def run(self):
+        print("Using geventlet")
         acceptors = []
         for sock in self.sockets:
             gsock = GreenSocket(sock)

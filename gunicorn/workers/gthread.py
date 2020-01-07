@@ -181,6 +181,7 @@ class ThreadWorker(base.Worker):
         return True
 
     def run(self):
+        print("Using gthread")
         # init listeners, add them to the event loop
         for sock in self.sockets:
             sock.setblocking(False)

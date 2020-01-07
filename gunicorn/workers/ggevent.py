@@ -54,6 +54,7 @@ class GeventWorker(AsyncWorker):
         return gevent.Timeout(self.cfg.keepalive, False)
 
     def run(self):
+        print("Using ggevent")
         servers = []
         ssl_args = {}
 

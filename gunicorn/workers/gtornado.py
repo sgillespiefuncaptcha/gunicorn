@@ -87,6 +87,7 @@ class TornadoWorker(Worker):
         super().init_process()
 
     def run(self):
+        print("Using gtornado")
         self.ioloop = IOLoop.instance()
         self.alive = True
         self.server_alive = False
