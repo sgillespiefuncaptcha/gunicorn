@@ -495,6 +495,7 @@ class Arbiter(object):
             print(worker.tmp)
             print(worker.tmp.last_update())
             print(worker)
+            print(type(worker))
             try:
                 if time.time() - worker.tmp.last_update() <= self.timeout:
                     continue
