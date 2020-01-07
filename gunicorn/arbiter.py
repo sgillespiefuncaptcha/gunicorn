@@ -491,6 +491,9 @@ class Arbiter(object):
             return
         workers = list(self.WORKERS.items())
         for (pid, worker) in workers:
+            print("TEST WORKER TIMEOUT TEST")
+            print(worker.tmp)
+            print( worker.tmp.last_update())
             try:
                 if time.time() - worker.tmp.last_update() <= self.timeout:
                     continue
